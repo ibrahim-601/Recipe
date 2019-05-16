@@ -42,22 +42,13 @@
             android:layout_below="@+id/nam"
             android:layout_marginTop="5dp" />
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/img"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner1">
-        </com.google.android.gms.ads.AdView>
 
         <TextView
             android:id="@+id/ingt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/nam"
-            android:layout_below="@+id/adView1"
+            android:layout_below="@+id/img"
             android:layout_marginTop="2dp"
             android:text="@string/ingrdnt"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
@@ -73,15 +64,6 @@
             android:layout_marginTop="5dp"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/ingrdnt"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner">
-        </com.google.android.gms.ads.AdView>
 
         <TextView
             android:id="@+id/ppt"
@@ -90,7 +72,7 @@
             android:layout_alignLeft="@+id/ingt"
             android:layout_alignStart="@+id/ingt"
             android:layout_marginTop="2dp"
-            android:layout_below="@+id/adView2"
+            android:layout_below="@+id/ingrdnt"
             android:text="@string/process"
             android:textAppearance="?android:attr/textAppearanceLarge"/>
 
@@ -104,16 +86,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@+id/process"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner1">
-        </com.google.android.gms.ads.AdView>
 
     </RelativeLayout>
 

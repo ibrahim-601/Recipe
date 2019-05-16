@@ -14,7 +14,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
-import mrcrow.recipes.R;
+import com.iriad11.recipes.R;
 
 public class DisplayRecipe extends AppCompatActivity {
 
@@ -24,43 +24,14 @@ public class DisplayRecipe extends AppCompatActivity {
     TextView ingrdnt;
     TextView process;
     int id_To_Update = 0;
-    private AdView mAdView1, mAdView2, mAdView3;
-    private AdRequest adRequest;
-    private InterstitialAd mInterstitialAd;
+
     private ImageView photo;
-    private InterstitialAd mInterstitialAd1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_recipe);
-
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-8565635437354736/4750103654"); //robin
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener() {
-
-            @Override
-            public void onAdLoaded() {
-                mInterstitialAd.show();
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                mInterstitialAd.loadAd(new AdRequest.Builder().build());
-            }
-        });
-
-
-        mInterstitialAd1 = new InterstitialAd(this);
-        mInterstitialAd1.setAdUnitId("ca-app-pub-2675122866814450/3948055581"); //ibrahim
-        mInterstitialAd1.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd1.setAdListener(new AdListener() {
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                mInterstitialAd1.loadAd(new AdRequest.Builder().build());
-            }
-        });
 
 
         name = (TextView) findViewById(R.id.name);
@@ -68,17 +39,6 @@ public class DisplayRecipe extends AppCompatActivity {
         process = (TextView) findViewById(R.id.process);
         photo = (ImageView) findViewById(R.id.img);
 
-        mAdView1 = (AdView) findViewById(R.id.adView1);
-        adRequest = new AdRequest.Builder().build();
-        mAdView1.loadAd(adRequest);
-
-        mAdView2 = (AdView) findViewById(R.id.adView2);
-        adRequest = new AdRequest.Builder().build();
-        mAdView2.loadAd(adRequest);
-
-        mAdView3 = (AdView) findViewById(R.id.adView3);
-        adRequest = new AdRequest.Builder().build();
-        mAdView3.loadAd(adRequest);
 
         mydb = new DbHelper(this);
 
@@ -121,7 +81,6 @@ public class DisplayRecipe extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        mInterstitialAd1.show();
         super.onBackPressed();
     }
 }
