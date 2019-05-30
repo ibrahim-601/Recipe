@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter arrayAdapter;
     private ArrayList array_list;
     private Button ref;
-    private AdView mAdView;
-    private InterstitialAd mInterstitialAd1;
     private int ad;
 
     @Override
@@ -65,9 +63,6 @@ public class MainActivity extends AppCompatActivity {
             arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1, array_list);
             //arrayAdapter=new ArrayAdapter(this,R.layout.listview, array_list);
 
-            mAdView = findViewById(R.id.adView);
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mAdView.loadAd(adRequest);
 
         }
         else{
