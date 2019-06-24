@@ -24,11 +24,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.squareup.okhttp:okhttp-urlconnection:2.7.5'
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
-
-    implementation 'com.google.android.gms:play-services-ads:16.0.0'
 }
