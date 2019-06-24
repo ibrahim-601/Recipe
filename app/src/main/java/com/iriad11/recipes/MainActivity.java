@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         int a=mydb.numberOfRows();
 
         array_list = mydb.getAllRecipe();
-        ad=0;
 
         if(a>0){
             arrayAdapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1, array_list);
